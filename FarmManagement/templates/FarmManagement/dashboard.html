@@ -1,0 +1,46 @@
+<!-- templates/dashboard.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Dashboard - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+{% endblock %}
+
+{% block content %}
+<header class="dashboard-header">
+    <h1>Welcome to My Farm App Dashboard</h1>
+    <nav class="dashboard-nav">
+        <a href="{% url 'farm_register' %}" class="dashboard-button">Farm Register</a>
+        <a href="{% url 'sold_animals' %}" class="dashboard-button">Sold Animals</a>
+        <a href="{% url 'losses' %}" class="dashboard-button">Losses</a>
+        <a href="{% url 'market_trends' %}" class="dashboard-button">Market Trends</a>
+    </nav>
+</header>
+<main>
+    <section class="dashboard-section">
+        <h2>Your Profile</h2>
+        <!-- Profile details here -->
+    </section>
+    <section class="dashboard-section">
+        <h2>Calendar</h2>
+        <!-- Calendar details here -->
+    </section>
+    <section class="dashboard-section">
+        <h2>Sales Graph</h2>
+        <!-- Sales graph details here -->
+    </section>
+    <section class="dashboard-section">
+        <h2>Market Trends</h2>
+        <!-- Market trends details here -->
+    </section>
+</main>
+<footer class="dashboard-footer">
+    <p>&copy; 2024 My Farm App. All rights reserved.</p>
+</footer>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock %}

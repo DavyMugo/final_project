@@ -1,0 +1,41 @@
+<!-- templates/farm_register.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Farm Register - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/farm_register.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Farm Register</h2>
+
+<div>
+    <h3>Current Animal Counts</h3>
+    <p>Cows: {{ counts.cows }} (Males: {{ gender_counts.cows.male }}, Females: {{ gender_counts.cows.female }})</p>
+    <p>Goats: {{ counts.goats }} (Males: {{ gender_counts.goats.male }}, Females: {{ gender_counts.goats.female }})</p>
+    <p>Camels: {{ counts.camels }} (Males: {{ gender_counts.camels.male }}, Females: {{ gender_counts.camels.female }})</p>
+    <p>Total Animals: {{ total_animals }}</p>
+</div>
+
+<h3>Register New Animal</h3>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Add Animal</button>
+</form>
+
+<h3>Registered Animals</h3>
+<ul>
+    {% for animal in animals %}
+    <li>{{ animal.type }} - {{ animal.tag_number }} ({{ animal.gender }}) 
+        <a href="{% url 'remove_animal' animal.id %}">Remove</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/farm_register.js' %}"></script>
+{% endblock %}

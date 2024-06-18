@@ -1,0 +1,33 @@
+<!-- templates/sold_animals.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Sold Animals - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/sold_animals.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Total Sales: ${{ total_sales }}</h2>
+
+<div>
+    <h3>Sold Animals by Month</h3>
+    <ul>
+        {% for item in sold_per_month %}
+        <li>{{ item.month }}: {{ item.count }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<h3>Sold Animals</h3>
+<ul>
+    {% for animal in sold_animals %}
+    <li>{{ animal.type }} - {{ animal.tag_number }} ({{ animal.gender }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/sold_animals.js' %}"></script>
+{% endblock %}

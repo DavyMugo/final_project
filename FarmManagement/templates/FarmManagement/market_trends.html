@@ -1,0 +1,19 @@
+<!-- templates/market_trends.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Market Trends - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/market_trends.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Market Trends</h2>
+<p>Click the button below to view the latest agricultural market news and updates.</p>
+<a href="https://www.agriculture.com/markets/newswire" target="_blank" class="market-trends-button">View Market Trends</a>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/market_trends.js' %}"></script>
+{% endblock %}

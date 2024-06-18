@@ -1,0 +1,33 @@
+<!-- templates/losses.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Losses - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/losses.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Animal Losses</h2>
+
+<div>
+    <h3>Deaths by Month</h3>
+    <ul>
+        {% for item in death_per_month %}
+        <li>{{ item.month }}: {{ item.count }}</li>
+        {% endfor %}
+    </ul>
+</div>
+
+<h3>Deceased Animals</h3>
+<ul>
+    {% for animal in death_animals %}
+    <li>{{ animal.type }} - {{ animal.tag_number }} ({{ animal.gender }})</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block js %}
+<script src="{% static 'js/losses.js' %}"></script>
+{% endblock %}

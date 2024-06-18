@@ -1,0 +1,22 @@
+/* static/css/market_trends.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    color: #333;
+}
+
+.market-trends-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.market-trends-button:hover {
+    background-color: #0056b3;
+}

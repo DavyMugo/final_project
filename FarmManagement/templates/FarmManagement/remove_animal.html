@@ -1,0 +1,23 @@
+<!-- templates/remove_animal.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Remove Animal - My Farm App{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/remove_animal.css' %}">
+{% endblock %}
+
+{% block content %}
+<h2>Remove Animal - {{ animal.type }} {{ animal.tag_number }}</h2>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Remove Animal</button>
+</form>
+{% endblock %}
+
+{% block js%}
+<script src="{% static 'js/remove_animal.js' %}"></script>
+{% endblock %}
+

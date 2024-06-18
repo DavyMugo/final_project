@@ -1,0 +1,46 @@
+#body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    margin:0;
+    padding:0;
+}
+
+#header#dashboard-header {
+    background-color: blue;
+    color: white;
+    padding:20px 0;
+}
+
+#header#dashboard-header h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+#main {
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin:auto;
+    padding:0 20px;
+}
+
+.dashboard-section {
+    background-color: white;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#footer#dashboard-footer {
+    background-color: blue;
+    color:whitesmoke;
+    text-align:center;
+    padding: 10px 0;
+    position:fixed;
+    bottom:0;
+    width: 100%;
+}

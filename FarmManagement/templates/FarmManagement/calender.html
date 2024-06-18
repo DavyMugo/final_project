@@ -1,0 +1,39 @@
+{%extends 'base.html'%}
+
+{%load static%}
+
+{%block title%}Calender -My Farm App {%endblock%}
+
+{%block csss %}
+    <link rel="stylesheet" href="{ static 'css/calender.css'}">
+
+{%endblock%}
+{%block content%}
+    <h2> Calender</h2>
+    <div id="calender-container">
+        <button id="prev-month">Prev</button>
+        <h3 id="calender-month-year">Month Year</h3>
+        <button id="next-month">Next</button>
+    </div>
+    <table id="calender-table">
+        <thead>
+            <tr>
+                <th>Sun</th>
+                <th>Mon</th>
+                <th>Tue</th>
+                <th>Wed</th>
+                <th>Thu</th>
+                <th>Fri</th>
+                <th>Sat</th>
+            </tr>
+        </thead>
+        <tbody id="calender-body">
+        
+        </tbody>
+    </table>
+{%endblock%}
+
+{% block js %}
+    <script src="{% static 'js/dashboard.js' %}" ></script>
+{% endblock %}
+

@@ -1,0 +1,28 @@
+<!-- templates/base.html -->
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My Farm App{% endblock %}</title>
+    <!-- Include CSS files -->
+    {% block css %}
+   
+    {% endblock %}
+</head>
+<body>
+    <header>
+        <!-- Navigation bar or header content goes here -->
+    </header>
+    <main>
+        <!-- Content from child templates goes here -->
+        {% block content %}
+        {% endblock %}
+    </main>
+    <!-- Include JavaScript files -->
+    {% block js %}
+    {% endblock %}
+</body>
+</html>

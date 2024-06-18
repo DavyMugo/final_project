@@ -1,0 +1,33 @@
+#calender-container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+}
+
+#calender-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#calender-table {
+    width: 100px;
+    border-collapse: collapse;
+}
+
+#calender-table th, #calender-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+#calender-table th {
+    background-color: #f0f0f0;
+}
+
+#calender-table td {
+    cursor:pointer;
+}
+
+#calender-table td.today {
+    background-color: #ffc;
+}
